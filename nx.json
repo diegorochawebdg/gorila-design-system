@@ -1,0 +1,44 @@
+{
+  "npmScope": "gorila-design-system",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "NTQwYTc4YTgtMDBmNy00NDAyLTg3YzItNjJkMjgxNmM2NDQwfHJlYWQtd3JpdGU=",
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "design-system": {
+      "tags": []
+    },
+    "design-system-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "design-system"
+      ]
+    }
+  }
+}
