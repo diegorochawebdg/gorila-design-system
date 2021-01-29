@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires, no-undef */
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const rootWebpackConfig = require('../../../.storybook/webpack.config');
 /**
@@ -16,6 +17,6 @@ module.exports = async ({ config, mode }) => {
     ? config.resolve.plugins.push(tsPaths)
     : (config.resolve.plugins = [tsPaths])
 
-  
+
   return config;
 };

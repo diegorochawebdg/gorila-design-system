@@ -2,6 +2,7 @@
   "name": "gorila-design-system",
   "version": "0.0.0",
   "license": "MIT",
+  "homepage": "https://diegorochawebdg.github.io/gorila-design-system",
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
@@ -26,7 +27,10 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "storybook": "nx run design-system:storybook"
+    "storybook": "nx run design-system:storybook",
+    "storybook:build": "nx run design-system:build-storybook",
+    "storybook:deploy": "gh-pages -d dist/storybook/design-system",
+    "storybook:publish": "npm run storybook:build && npm run storybook:deploy"
   },
   "private": true,
   "dependencies": {
@@ -72,6 +76,7 @@
     "eslint": "7.10.0",
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "gh-pages": "^3.1.0",
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.1",
     "prettier": "2.2.1",
